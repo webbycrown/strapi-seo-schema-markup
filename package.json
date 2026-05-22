@@ -1,0 +1,109 @@
+{
+  "name": "@webbycrown/strapi-seo-schema-markup",
+  "version": "1.0.0",
+  "description": "Strapi plugin for JSON-LD Schema.org structured data: per-entry overrides, global templates with variables, and a dedicated schema API.",
+  "license": "MIT",
+  "author": "WebbyCrown <info@webbycrown.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webbycrown/strapi-seo-schema-markup.git"
+  },
+  "homepage": "https://github.com/webbycrown/strapi-seo-schema-markup#readme",
+  "bugs": {
+    "url": "https://github.com/webbycrown/strapi-seo-schema-markup/issues"
+  },
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "seo",
+    "schema",
+    "json-ld",
+    "structured-data",
+    "schema.org"
+  ],
+  "strapi": {
+    "name": "strapi-seo-schema-markup",
+    "displayName": "Structured data",
+    "description": "Global and per-entry JSON-LD structured data with a dedicated API",
+    "kind": "plugin"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "source": "./admin/src/index.js",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "source": "./server/src/index.js",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "strapi-admin.js",
+    "strapi-server.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build && node scripts/copy-server-assets.js",
+    "watch": "strapi-plugin watch",
+    "verify": "strapi-plugin verify",
+    "prepublishOnly": "npm run build && npm run verify"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@strapi/design-system": "^2.0.0",
+    "@strapi/icons": "^2.0.0",
+    "@strapi/sdk-plugin": "^6.1.0",
+    "@strapi/strapi": "^5.46.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intl": "^6.8.9",
+    "react-router-dom": "^6.30.1",
+    "styled-components": "^6.1.19"
+  },
+  "peerDependencies": {
+    "@strapi/design-system": "^2.0.0",
+    "@strapi/icons": "^2.0.0",
+    "@strapi/strapi": "^5.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-intl": "^6.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@strapi/design-system": {
+      "optional": true
+    },
+    "@strapi/icons": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-intl": {
+      "optional": true
+    },
+    "react-router-dom": {
+      "optional": true
+    },
+    "styled-components": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0 <=24.x.x",
+    "npm": ">=6.0.0"
+  }
+}
