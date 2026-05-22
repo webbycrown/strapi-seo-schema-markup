@@ -1,5 +1,20 @@
 "use strict";
 const PLUGIN_ID = "strapi-seo-schema-markup";
+const PERMISSIONS = {
+  readCollectionTypes: [
+    {
+      action: `plugin::${PLUGIN_ID}.collection-types.read`,
+      subject: null
+    }
+  ],
+  manageTemplate: [
+    {
+      action: `plugin::${PLUGIN_ID}.template.manage`,
+      subject: null
+    }
+  ]
+};
+const PLUGIN_API = `/${PLUGIN_ID}`;
 const index = {
   register(app) {
     app.registerPlugin({
@@ -13,9 +28,9 @@ const index = {
         id: `${PLUGIN_ID}.settings.menu`,
         defaultMessage: "Structured data"
       },
-      permissions: [],
+      permissions: PERMISSIONS.readCollectionTypes,
       Component: async () => {
-        const component = await Promise.resolve().then(() => require("./Router-CmYa2gT_.js"));
+        const component = await Promise.resolve().then(() => require("./Router-BRIUqWtl.js"));
         return {
           default: component.Router
         };
@@ -23,5 +38,7 @@ const index = {
     });
   }
 };
+exports.PERMISSIONS = PERMISSIONS;
+exports.PLUGIN_API = PLUGIN_API;
 exports.PLUGIN_ID = PLUGIN_ID;
 exports.index = index;

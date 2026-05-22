@@ -14,7 +14,7 @@ import {
   Typography,
 } from '@strapi/design-system';
 import { EmptyDocuments } from '@strapi/icons/symbols';
-import { Layouts, Page, useFetchClient } from '@strapi/admin/strapi-admin';
+import { Layouts, Page, useFetchClient } from '@strapi/strapi/admin';
 import { PLUGIN_API, PLUGIN_ID, PERMISSIONS } from '../constants';
 
 const CollectionTypesListPage = () => {

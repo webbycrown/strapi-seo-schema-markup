@@ -12,7 +12,7 @@ import {
   Typography,
 } from '@strapi/design-system';
 import { ArrowLeft } from '@strapi/icons';
-import { Layouts, Page, useFetchClient, useNotification } from '@strapi/admin/strapi-admin';
+import { Layouts, Page, useFetchClient, useNotification } from '@strapi/strapi/admin';
 import { TemplateJsonEditor } from '../components/TemplateJsonEditor';
 import { buildFieldVariables } from '../utils/buildFieldVariables';
 import { PLUGIN_API, PLUGIN_ID, PERMISSIONS } from '../constants';

@@ -1,4 +1,4 @@
-import { PLUGIN_ID } from './constants';
+import { PLUGIN_ID, PERMISSIONS } from './constants';
 
 export default {
   register(app) {
@@ -16,7 +16,7 @@ export default {
         defaultMessage: 'Structured data',
       },
 
-      permissions: [],
+      permissions: PERMISSIONS.readCollectionTypes,
 
       Component: async () => {
         const component = await import('./pages/Router');
