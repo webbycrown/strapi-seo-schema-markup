@@ -19,7 +19,7 @@ const index = {
         defaultMessage: "Structured data"
       },
       permissions: PERMISSIONS.readCollectionTypes,
-      Component: () => Promise.resolve().then(() => require("./Router-DhW3z0NX.js")).then((mod) => ({
+      Component: () => Promise.resolve().then(() => require("./Router-BhDlrDKg.js")).then((mod) => ({
         default: mod.Router
       }))
     });

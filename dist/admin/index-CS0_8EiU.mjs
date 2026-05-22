@@ -18,7 +18,7 @@ const index = {
         defaultMessage: "Structured data"
       },
       permissions: PERMISSIONS.readCollectionTypes,
-      Component: () => import("./Router-B5h2SKdZ.mjs").then((mod) => ({
+      Component: () => import("./Router-CgJwa8x8.mjs").then((mod) => ({
         default: mod.Router
       }))
     });
