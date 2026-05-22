@@ -25,7 +25,12 @@ import snakeCase from "lodash/snakeCase";
 import mapKeys from "lodash/mapKeys";
 import "lodash/omit";
 import "lodash/throttle";
-import { P as PERMISSIONS, b as PLUGIN_ID, a as PLUGIN_API } from "./index-CS0_8EiU.mjs";
+import { P as PLUGIN_ID } from "./index-BQ8b2xAH.mjs";
+const PERMISSIONS = {
+  readCollectionTypes: [{ action: `plugin::${PLUGIN_ID}.collection-types.read`, subject: null }],
+  manageTemplate: [{ action: `plugin::${PLUGIN_ID}.template.manage`, subject: null }]
+};
+const PLUGIN_API = `/${PLUGIN_ID}`;
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x2) {
   return x2 && x2.__esModule && Object.prototype.hasOwnProperty.call(x2, "default") ? x2["default"] : x2;
