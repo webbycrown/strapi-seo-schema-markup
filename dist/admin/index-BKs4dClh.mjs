@@ -1,4 +1,3 @@
-"use strict";
 const PLUGIN_ID = "strapi-seo-schema-markup";
 const index = {
   register(app) {
@@ -15,7 +14,7 @@ const index = {
       },
       permissions: [],
       Component: async () => {
-        const component = await Promise.resolve().then(() => require("./Router-CBpeyBww.js"));
+        const component = await import("./Router-De6Ru5FP.mjs");
         return {
           default: component.Router
         };
@@ -23,5 +22,7 @@ const index = {
     });
   }
 };
-exports.PLUGIN_ID = PLUGIN_ID;
-exports.index = index;
+export {
+  PLUGIN_ID as P,
+  index as i
+};

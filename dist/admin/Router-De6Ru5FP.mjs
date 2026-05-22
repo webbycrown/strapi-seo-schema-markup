@@ -25,10 +25,10 @@ import snakeCase from "lodash/snakeCase";
 import mapKeys from "lodash/mapKeys";
 import "lodash/omit";
 import "lodash/throttle";
-import { P as PLUGIN_ID } from "./index-BQ8b2xAH.mjs";
+import { P as PLUGIN_ID } from "./index-BKs4dClh.mjs";
 const PERMISSIONS = {
-  readCollectionTypes: [{ action: `plugin::${PLUGIN_ID}.collection-types.read`, subject: null }],
-  manageTemplate: [{ action: `plugin::${PLUGIN_ID}.template.manage`, subject: null }]
+  readCollectionTypes: [],
+  manageTemplate: []
 };
 const PLUGIN_API = `/${PLUGIN_ID}`;
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};

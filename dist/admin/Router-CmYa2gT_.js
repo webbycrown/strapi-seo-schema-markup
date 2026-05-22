@@ -26,7 +26,7 @@ const snakeCase = require("lodash/snakeCase");
 const mapKeys = require("lodash/mapKeys");
 require("lodash/omit");
 require("lodash/throttle");
-const index = require("./index-XMOc4fa8.js");
+const index = require("./index-C9uoxi-T.js");
 const _interopDefault = (e2) => e2 && e2.__esModule ? e2 : { default: e2 };
 function _interopNamespace(e2) {
   if (e2 && e2.__esModule) return e2;
@@ -56,8 +56,8 @@ const mapValues__default = /* @__PURE__ */ _interopDefault(mapValues);
 const snakeCase__default = /* @__PURE__ */ _interopDefault(snakeCase);
 const mapKeys__default = /* @__PURE__ */ _interopDefault(mapKeys);
 const PERMISSIONS = {
-  readCollectionTypes: [{ action: `plugin::${index.PLUGIN_ID}.collection-types.read`, subject: null }],
-  manageTemplate: [{ action: `plugin::${index.PLUGIN_ID}.template.manage`, subject: null }]
+  readCollectionTypes: [],
+  manageTemplate: []
 };
 const PLUGIN_API = `/${index.PLUGIN_ID}`;
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};

@@ -1,8 +1,8 @@
 import { PLUGIN_ID } from './pluginId';
 
 const PERMISSIONS = {
-  readCollectionTypes: [{ action: `plugin::${PLUGIN_ID}.collection-types.read`, subject: null }],
-  manageTemplate: [{ action: `plugin::${PLUGIN_ID}.template.manage`, subject: null }],
+  readCollectionTypes: [],
+  manageTemplate: [],
 };
 
 const PLUGIN_API = `/${PLUGIN_ID}`;
